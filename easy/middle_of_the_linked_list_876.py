@@ -1,6 +1,4 @@
 import time
-from collections import Counter
-import heapq
 import pytest
 import random
 
@@ -46,23 +44,26 @@ class ListNode:
         self.next = next  # contains the reference to the next node
 
 
+# Creatively redesigned code from https://stackoverflow.com/questions/280243/python-linked-list
 class LinkedList:
     def __init__(self):
         self.head = None
 
     def add_node(self, val):
         new_node = ListNode(val, self.head)  # create a new node
-        self.head = new_node  # set the current node to the new one.
+        self.head = new_node                 # set the current node to the new one.
 
-    def list_print(self):
+    def __str__(self):
         node = self.head
+        _str = ''  # [1->2, 2->3, 3->4, 4->5, 5->None]
         while node:
-            print(node.val if node else None, end=' ')
+            _str += f'{node.val}->'
             node = node.next
+        return _str + 'None'
 
 
 def bild_linked_list(arr: list):
-    """ Return the singly linked list """
+    """ Bild the singly linked list """
 
     llist = LinkedList()
     for x in reversed(arr):
@@ -78,13 +79,17 @@ def middle_node(arr: list, is_debug=False) -> LinkedList:
     fast = head
     slow = head
 
+    if is_debug:
+        print(f'\n{arr}')
     while fast and fast.next:
         slow = slow.next
         fast = fast.next.next
-        if is_debug: print(f'fast: {fast.val}, slow: {slow.val}' if fast else f'fast: {fast}, slow: {slow.val}')
+        if is_debug:
+            print(f'fast: {fast.val}, slow: {slow.val}' if fast else f'fast: {fast}, slow: {slow.val}')
 
     llist.head = slow  # for compatibility to my LinkedList and tests
-    if is_debug: llist.list_print()
+    if is_debug:
+        print(f'Linked list: {llist}')
     return llist  # slow -> to leetcode.com
 
 
@@ -94,7 +99,6 @@ test_data = [
     ([1, 2], [2]),
     (list(range(1, 10)) * 2, list(range(1, 10))),
     (list(range(1, 11)) * 2, list(range(1, 11)))
-
 ]
 
 
@@ -123,6 +127,6 @@ def test_time(n_iter=100):
 
         acc = max(acc, t1 - t0)
 
-    print(acc)  # 0.00014
+    print(acc)  # 5e-5
 
     assert acc < 0.1
