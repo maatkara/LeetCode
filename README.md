@@ -1,12 +1,12 @@
 # LeetCode
 
-My Python LeetCode Solutions
+My Python LeetCode Solutions with Tests
 
 ## Priorities:
 
-1. Algorithm running **time**
-2. **Memory** required by the algorithm
-3. Code **readability** vs code brevity
+1. Running **Time**
+2. Used **Memory**
+3. Code **Readability** vs Code Brevity
 
 ## LeetCode Algorithm
 
@@ -22,6 +22,7 @@ My Python LeetCode Solutions
 | 659  | [Split Array into Consecutive Subsequences](https://leetcode.com/problems/split-array-into-consecutive-subsequences/) | [Python](https://github.com/maatkara/LeetCode/blob/main/medium/split_array_into_consecutive_subsequences_659.py) |     Medium |
 | 342  | [Power of Four](https://leetcode.com/problems/power-of-four/)                                                         |                [Python](https://github.com/maatkara/LeetCode/blob/main/easy/power_of_four_342.py)                |       Easy |
 | 206  | [Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/)                                             |             [Python](https://github.com/maatkara/LeetCode/blob/main/easy/reverse_linked_list_206.py)             |       Easy |
+| 234  | [Palindrome Linked List](https://leetcode.com/problems/palindrome-linked-list/)                                       |           [Python](https://github.com/maatkara/LeetCode/blob/main/easy/palindrome_linked_list_234.py)            |       Easy |
 
 
 
