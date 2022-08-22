@@ -21,6 +21,7 @@ My Python LeetCode Solutions
 | 876  | [Middle of the Linked List](https://leetcode.com/problems/middle-of-the-linked-list/)                                 |          [Python](https://github.com/maatkara/LeetCode/blob/main/easy/middle_of_the_linked_list_876.py)          |       Easy |
 | 659  | [Split Array into Consecutive Subsequences](https://leetcode.com/problems/split-array-into-consecutive-subsequences/) | [Python](https://github.com/maatkara/LeetCode/blob/main/medium/split_array_into_consecutive_subsequences_659.py) |     Medium |
 | 342  | [Power of Four](https://leetcode.com/problems/power-of-four/)                                                         |                [Python](https://github.com/maatkara/LeetCode/blob/main/easy/power_of_four_342.py)                |       Easy |
+| 206  | [Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/)                                             |             [Python](https://github.com/maatkara/LeetCode/blob/main/easy/reverse_linked_list_206.py)             |       Easy |
 
 
 
