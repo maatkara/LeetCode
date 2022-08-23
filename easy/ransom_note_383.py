@@ -70,7 +70,8 @@ test_data = [
     ('aa', 'ab', False),
     ('aa', 'aab', True),
     ('aa', 'aab', True),
-    (a_l, a_lr, True)
+    (a_l, a_lr, True),
+    (a_l, a_lr[1:], False)
 ]
 
 
