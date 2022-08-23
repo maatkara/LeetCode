@@ -43,12 +43,7 @@ X_MAX = 26
 
 
 def can_construct(ransom_note: list, magazine: str) -> bool:
-    """
-
-    :param ransom_note:
-    :param magazine:
-    :return:
-    """
+    """Return true if ransom_note can be constructed by using the letters from magazine and false otherwise"""
 
     magazine_d = Counter(magazine)
     ransom_note_d = defaultdict(int)
