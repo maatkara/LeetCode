@@ -26,6 +26,7 @@ My Python LeetCode Solutions with Tests
 | 383  | [Ransom Note](https://leetcode.com/problems/ransom-note/)                                                             | Hash        |                 [Python](https://github.com/maatkara/LeetCode/blob/main/easy/ransom_note_383.py)                 |       Easy |
 | 326  | [Power of Three](https://leetcode.com/problems/power-of-three/)                                                       | Math        |               [Python](https://github.com/maatkara/LeetCode/blob/main/easy/power_of_three_326.py)                |       Easy |
 | 412  | [Fizz Buzz](https://leetcode.com/problems/fizz-buzz/)                                                                 | String      |                  [Python](https://github.com/maatkara/LeetCode/blob/main/easy/fizz_buzz_412.py)                  |       Easy |
+| 1337 | [The K Weakest Rows in a Matrix](https://leetcode.com/problems/the-k-weakest-rows-in-a-matrix/)                       | Heap        |          [Python](https://github.com/maatkara/LeetCode/blob/main/easy/k_weakest_rows_in_matrix_1337.py)          |       Easy |
 
 
 
