@@ -32,7 +32,7 @@ N_MAX = 10
 A_MAX = 10
 
 
-def subset(nums):
+def subset(nums: list) -> list:
     ans_ = [[]]
     n = len(nums)
 
@@ -42,7 +42,7 @@ def subset(nums):
     return ans_
 
 
-def subset_rec(nums):
+def subset_rec(nums: list) -> list:
     ans = []
     n = len(nums)
 
@@ -55,7 +55,18 @@ def subset_rec(nums):
                 dfs(j + 1, subset + [nums[j]])
 
     dfs(0, [])
-    
+
+    return ans
+
+
+def subset_bitmask(nums: list) -> list:
+    ans = []
+    n = len(nums)
+
+    for i in range(2 ** n, 2 ** (n + 1)):
+        bitmask = bin(i)[3:]  # bitmask, from 0..00 to 1..11
+        ans.append([nums[j] for j in range(n) if bitmask[j] == '1'])
+
     return ans
 
 
@@ -64,7 +75,7 @@ test_data = [
     ([0], [[], [0]]),
 
 ]
-f_l = [subset, subset_rec]
+f_l = [subset, subset_rec, subset_bitmask]
 
 
 @pytest.mark.parametrize('nums, expected', test_data)
@@ -93,7 +104,8 @@ def test_time(n_iter: int = 100):
 
 
 """
-subset     0.03877704200021981
-subset_rec 0.0003550629999153898
+   subset           0.038052334000894916
+   subset_rec       0.0003553299993654946
+   subset_bitmask   0.0015050509991851868
 
 """
