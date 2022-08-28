@@ -31,6 +31,7 @@ My Python LeetCode Solutions with Tests
 | 1672 | [Richest Customer Wealth](https://leetcode.com/problems/richest-customer-wealth/)                                       | Array            |          [Python](https://github.com/maatkara/LeetCode/blob/main/easy/richest_customer_wealth_1672.py)           |       Easy |
 | 869  | [Reordered Power of 2](https://leetcode.com/problems/reordered-power-of-2/)                                             | Math             |           [Python](https://github.com/maatkara/LeetCode/blob/main/medium/reordered_power_of_2_869.py)            |     Medium |
 | 78   | [Subsets](https://leetcode.com/problems/subsets/)                                                                       | Tree             |                  [Python](https://github.com/maatkara/LeetCode/blob/main/medium/subsets_78.py)                   |     Medium |
+| 1329 | [Sort the Matrix Diagonally](https://leetcode.com/problems/sort-the-matrix-diagonally/)                                 | Array            |        [Python](https://github.com/maatkara/LeetCode/blob/main/medium/sort_the_matrix_diagonally_1329.py)        |     Medium |
 
 
 
