@@ -56,6 +56,11 @@ def rotate(matrix: list) -> None:
     return
 
 
+def rotate_short(matrix):
+    n = len(matrix)
+    matrix[:] = zip(*matrix[::-1])
+
+
 test_data = [
     ([[1, 2, 3], [4, 5, 6], [7, 8, 9]], [[7, 4, 1], [8, 5, 2], [9, 6, 3]]),
 
@@ -64,14 +69,15 @@ test_data = [
 
 ]
 
-f_l = [rotate]
+f_l = [rotate_short]  # rotate,
 
 
 @pytest.mark.parametrize('mat, expected', test_data)
 def test(mat, expected):
-    for f in f_l:
+    for i, f in enumerate(f_l):
         print('\n', f.__name__)
         f(mat)
+        if i: f(mat)  # one more rotation!
         print(f.__name__, mat)
         assert mat == expected
 
