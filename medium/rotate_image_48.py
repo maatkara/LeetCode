@@ -69,7 +69,7 @@ test_data = [
 
 ]
 
-f_l = [rotate_short]  # rotate,
+f_l = [rotate_short, rotate]
 
 
 @pytest.mark.parametrize('mat, expected', test_data)
