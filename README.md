@@ -33,6 +33,7 @@ My Python LeetCode Solutions with Tests
 | 78   | [Subsets](https://leetcode.com/problems/subsets/)                                                                       | Tree             |                  [Python](https://github.com/maatkara/LeetCode/blob/main/medium/subsets_78.py)                   |     Medium |
 | 1329 | [Sort the Matrix Diagonally](https://leetcode.com/problems/sort-the-matrix-diagonally/)                                 | Array            |        [Python](https://github.com/maatkara/LeetCode/blob/main/medium/sort_the_matrix_diagonally_1329.py)        |     Medium |
 | 48   | [Rotate Image](https://leetcode.com/problems/rotate-image/)                                                             | Array            |                [Python](https://github.com/maatkara/LeetCode/blob/main/medium/rotate_image_48.py)                |     Medium |
+| 1448 | [Count Good Nodes in Binary Tree](https://leetcode.com/problems/count-good-nodes-in-binary-tree/)                       | Array            |        [Python](https://github.com/maatkara/LeetCode/blob/main/medium/pacific_atlantic_water_flow_417.py)        |     Medium |
 
 
 
