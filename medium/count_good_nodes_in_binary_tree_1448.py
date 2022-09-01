@@ -69,7 +69,7 @@ class BinaryTree:
 
     def make_tree(self, root_l: list):
         n = len(root_l)
-        children = [None] * n  # left child index 
+        children = [None] * n  # left child index
 
         for i, el in enumerate(root_l):
             #  for not reversed
@@ -167,13 +167,12 @@ def test_time(n_iter: int = 100):
 # -------------------------------
 # TO README
 def test_readme():
-    topic = 'Array'
-    file_name = 'pacific_atlantic_water_flow_417.py'
+    topic = 'Tree'
+    file_name = 'count_good_nodes_in_binary_tree_1448.py'
     print('\n')
     print(get_readme(string_, topic, file_name))
 
 
 """
-|1448 | [Count Good Nodes in Binary Tree](https://leetcode.com/problems/count-good-nodes-in-binary-tree/) | Array | [Python](https://github.com/maatkara/LeetCode/blob/main/medium/pacific_atlantic_water_flow_417.py) | Medium|
-
+|1448 | [Count Good Nodes in Binary Tree](https://leetcode.com/problems/count-good-nodes-in-binary-tree/) | Tree | [Python](https://github.com/maatkara/LeetCode/blob/main/medium/count_good_nodes_in_binary_tree_1448.py) | Medium|
 """
