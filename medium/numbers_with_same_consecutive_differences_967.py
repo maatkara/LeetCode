@@ -38,7 +38,7 @@ Constraints:
 """
 
 N_MAX = 9
-init
+
 
 def nums_same_consec_diff_dfs(n, k) -> list:
     R_MAX = 10
