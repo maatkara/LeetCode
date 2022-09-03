@@ -35,6 +35,7 @@ My Python LeetCode Solutions with Tests
 | 48   | [Rotate Image](https://leetcode.com/problems/rotate-image/)                                                             | Array            |                [Python](https://github.com/maatkara/LeetCode/blob/main/medium/rotate_image_48.py)                |     Medium |
 | 1448 | [Count Good Nodes in Binary Tree](https://leetcode.com/problems/count-good-nodes-in-binary-tree/)                       | Tree             |     [Python](https://github.com/maatkara/LeetCode/blob/main/medium/count_good_nodes_in_binary_tree_1448.py)      |     Medium |
 | 637  | [Average of Levels in Binary Tree](https://leetcode.com/problems/average-of-levels-in-binary-tree/)                     | Tree             |      [Python](https://github.com/maatkara/LeetCode/blob/main/easy/average_of_levels_in_binary_tree_637.py)       |       Easy |
+| 967  | [Numbers With Same Consecutive Differences](https://leetcode.com/problems/numbers-with-same-consecutive-differences/)   | Tree             | [Python](https://github.com/maatkara/LeetCode/blob/main/medium/numbers_with_same_consecutive_differences_967.py) |     Medium |
 
 
 
