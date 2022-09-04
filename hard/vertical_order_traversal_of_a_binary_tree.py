@@ -64,9 +64,9 @@ The number of nodes in the tree is in the range [1, 1000].
 
 Solution:
 -----------------
-1. d_coord: d[node]= namedtuple(r,c)
+1. 
    d_col = def_d([]) 
-   d_col[col] = [node i, node j...] if row(node i)==row(node j) (only 2 node may have the same row): check to min, <->
+   d_col[col] = [(r, node_i.var), (node_j.var)] 
    
 2. ans: []   ans <- d_col, heapsort
   
@@ -202,7 +202,9 @@ TIME:
   vertical_traversal_h: 0.039354375998300384
 """
 
+
 # -------------------------------
+
 
 # TO README
 def test_readme():
