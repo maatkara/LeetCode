@@ -32,13 +32,13 @@ Output: [[1],[2,3,4,5],[6,7,8,9,10],[11,12,13],[14]]
 Constraints:
 ------------------------
 The height of the n-ary tree is less than or equal to 1000
-The total number of nodes is between [0, 104]
+The total number of nodes is between [0, 10^4]
 
 
 5.9.22
 """
 H_MAX = int(1e3)
-N_MAX = 104
+N_MAX = int(1e4)
 
 
 def level_order_dfs(root_l: list) -> list:
@@ -159,8 +159,8 @@ def test_time(n_iter: int = 100):
 
 """
 TIME: 
-  level_order_dfs: 9.611700079403818e-05
-  level_order_dfs_1: 8.303600043291226e-05
+  level_order_dfs: 0.049994766999589046
+  level_order_dfs_1: 0.049421694999182364
 """
 
 
