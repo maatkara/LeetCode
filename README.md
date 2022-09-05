@@ -39,6 +39,6 @@ My Python LeetCode Solutions with Tests
 | 637  | [Average of Levels in Binary Tree](https://leetcode.com/problems/average-of-levels-in-binary-tree/)                     | Tree             |      [Python](https://github.com/maatkara/LeetCode/blob/main/easy/average_of_levels_in_binary_tree_637.py)       |       Easy |
 | 967  | [Numbers With Same Consecutive Differences](https://leetcode.com/problems/numbers-with-same-consecutive-differences/)   | Tree             | [Python](https://github.com/maatkara/LeetCode/blob/main/medium/numbers_with_same_consecutive_differences_967.py) |     Medium |
 | 987  | [Vertical Order Traversal of a Binary Tree](https://leetcode.com/problems/vertical-order-traversal-of-a-binary-tree/)   | Tree             |  [Python](https://github.com/maatkara/LeetCode/blob/main/hard/vertical_order_traversal_of_a_binary_tree_987.py)  |       Hard |
-
+| 429  | [N-ary Tree Level Order Traversal](https://leetcode.com/problems/n-ary-tree-level-order-traversal/)                     | Tree             |      [Python](https://github.com/maatkara/LeetCode/blob/main/medium/nary_tree_level_order_traversal_429.py)      |     Medium |
 
 
