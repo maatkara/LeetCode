@@ -38,7 +38,7 @@ My Python LeetCode Solutions with Tests
 | 1448 | [Count Good Nodes in Binary Tree](https://leetcode.com/problems/count-good-nodes-in-binary-tree/)                       | Tree             |     [Python](https://github.com/maatkara/LeetCode/blob/main/medium/count_good_nodes_in_binary_tree_1448.py)      |     Medium |
 | 637  | [Average of Levels in Binary Tree](https://leetcode.com/problems/average-of-levels-in-binary-tree/)                     | Tree             |      [Python](https://github.com/maatkara/LeetCode/blob/main/easy/average_of_levels_in_binary_tree_637.py)       |       Easy |
 | 967  | [Numbers With Same Consecutive Differences](https://leetcode.com/problems/numbers-with-same-consecutive-differences/)   | Tree             | [Python](https://github.com/maatkara/LeetCode/blob/main/medium/numbers_with_same_consecutive_differences_967.py) |     Medium |
-| 987  | [Vertical Order Traversal of a Binary Tree](https://leetcode.com/problems/vertical-order-traversal-of-a-binary-tree/)   | Tree             |    [Python](https://github.com/maatkara/LeetCode/blob/main/hard/vertical_order_traversal_of_a_binary_tree.py)    |       Hard |
+| 987  | [Vertical Order Traversal of a Binary Tree](https://leetcode.com/problems/vertical-order-traversal-of-a-binary-tree/)   | Tree             |  [Python](https://github.com/maatkara/LeetCode/blob/main/hard/vertical_order_traversal_of_a_binary_tree_987.py)  |       Hard |
 
 
 

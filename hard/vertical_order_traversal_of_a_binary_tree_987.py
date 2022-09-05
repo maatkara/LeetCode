@@ -209,12 +209,12 @@ TIME:
 # TO README
 def test_readme():
     topic = 'Tree'
-    file_name = 'vertical_order_traversal_of_a_binary_tree.py'
+    file_name = 'vertical_order_traversal_of_a_binary_tree_987.py'
     print('\n')
     print(get_readme(string_, topic, file_name))
 
 
 """
-|987 | [Vertical Order Traversal of a Binary Tree](https://leetcode.com/problems/vertical-order-traversal-of-a-binary-tree/) | Tree | [Python](https://github.com/maatkara/LeetCode/blob/main/hard/vertical_order_traversal_of_a_binary_tree.py) | Hard|
+|987 | [Vertical Order Traversal of a Binary Tree](https://leetcode.com/problems/vertical-order-traversal-of-a-binary-tree/) | Tree | [Python](https://github.com/maatkara/LeetCode/blob/main/hard/vertical_order_traversal_of_a_binary_tree_987.py) | Hard|
 
 """
