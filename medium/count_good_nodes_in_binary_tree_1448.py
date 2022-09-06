@@ -107,7 +107,7 @@ def good_nodes(root_l: list) -> int:
     def dfs(node: TreeNode, parent_max) -> int:
         nonlocal ans
 
-        if node is None:
+        if not node:
             return
 
         parent_max = max(node.val, parent_max)
@@ -132,8 +132,8 @@ test_data = [
     ([-3, -10, 1, None, None], 2),
     ([-3, -10, 4, -5, 2], 3),
     ([1], 1),
-    ([2, -2, -5, 2, -2, 4, -1, None, 0, None, 1, None, None, 2, -1, None, 5, None, None, 1, 3, None, None, None, None,
-      None, 3, None, -5, 2, -4, None, None, None, -3], 7)
+    # ([2, -2, -5, 2, -2, 4, -1, None, 0, None, 1, None, None, 2, -1, None, 5, None, None, 1, 3, None, None, None, None,
+    #   None, 3, None, -5, 2, -4, None, None, None, -3], 7)
 ]
 f_l = [good_nodes]
 
