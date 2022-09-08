@@ -42,5 +42,6 @@ My Python LeetCode Solutions with Tests
 | 429  | [N-ary Tree Level Order Traversal](https://leetcode.com/problems/n-ary-tree-level-order-traversal/)                     | Tree             |      [Python](https://github.com/maatkara/LeetCode/blob/main/medium/nary_tree_level_order_traversal_429.py)      |     Medium |
 | 814  | [Binary Tree Pruning](https://leetcode.com/problems/binary-tree-pruning/)                                               | Tree             |            [Python](https://github.com/maatkara/LeetCode/blob/main/medium/binary_tree_pruning_814.py)            |     Medium |
 | 606  | [Construct String from Binary Tree](https://leetcode.com/problems/construct-string-from-binary-tree/)                   | Tree             |      [Python](https://github.com/maatkara/LeetCode/blob/main/easy/construct_string_from_binary_tree_606.py)      |       Easy |
+| 94   | [Binary Tree Inorder Traversal](https://leetcode.com/problems/binary-tree-inorder-traversal/)                           | Tree             |        [Python](https://github.com/maatkara/LeetCode/blob/main/easy/binary_tree_inorder_traversal_94.py)         |       Easy |
 
 
