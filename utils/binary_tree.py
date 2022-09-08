@@ -35,7 +35,7 @@ class BinaryTree:
                 j += 1
             i += 1
 
-        self.root = root_l[0]
+        self.root = root_l[0] if self.size else None
 
     @staticmethod
     def add_node(x):
