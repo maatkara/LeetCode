@@ -46,5 +46,6 @@ My Python LeetCode Solutions with Tests
 | 1996 | [The Number of Weak Characters in the Game](https://leetcode.com/problems/the-number-of-weak-characters-in-the-game/)   | Stack            | [Python](https://github.com/maatkara/LeetCode/blob/main/medium/the_number_of_weak_characters_in_the_game_1996.py) |     Medium |
 | 188  | [Best Time to Buy and Sell Stock IV](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iv/)                 | Dp               |      [Python](https://github.com/maatkara/LeetCode/blob/main/hard/best_time_to_buy_and_sell_stock_IV_188.py)      |       Hard |
 | 1383 | [Maximum Performance of a Team](https://leetcode.com/problems/maximum-performance-of-a-team/)                           | Heap             |        [Python](https://github.com/maatkara/LeetCode/blob/main/hard/maximum_performance_of_a_team_1383.py)        |       Hard |
+| 948  | [Bag of Tokens](https://leetcode.com/problems/bag-of-tokens/)                                                           | Two pointer      |               [Python](https://github.com/maatkara/LeetCode/blob/main/medium/bag-of-tokens-948.py)                |     Medium |
 
 
