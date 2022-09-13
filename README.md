@@ -47,5 +47,6 @@ My Python LeetCode Solutions with Tests
 | 188  | [Best Time to Buy and Sell Stock IV](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iv/)                 | Dp               |      [Python](https://github.com/maatkara/LeetCode/blob/main/hard/best_time_to_buy_and_sell_stock_IV_188.py)      |       Hard |
 | 1383 | [Maximum Performance of a Team](https://leetcode.com/problems/maximum-performance-of-a-team/)                           | Heap             |        [Python](https://github.com/maatkara/LeetCode/blob/main/hard/maximum_performance_of_a_team_1383.py)        |       Hard |
 | 948  | [Bag of Tokens](https://leetcode.com/problems/bag-of-tokens/)                                                           | Two pointer      |               [Python](https://github.com/maatkara/LeetCode/blob/main/medium/bag-of-tokens-948.py)                |     Medium |
+| 393  | [UTF-8 Validation](https://leetcode.com/problems/utf-8-validation/)                                                     | Bit manipulation |              [Python](https://github.com/maatkara/LeetCode/blob/main/medium/utf-8-validation-393.py)              |     Medium |
 
 
