@@ -59,6 +59,7 @@ def pseudo_palindromic_paths(root_l: list) -> int:
     bt = BinaryTree()
     bt.make_tree(root_l)
     root = bt.root
+
     # -----------------------------
 
     def dfs(node: TreeNode, values: set):
@@ -82,7 +83,33 @@ def pseudo_palindromic_paths(root_l: list) -> int:
     return int(dfs(root, set()))
 
 
-f_l = [pseudo_palindromic_paths]
+def pseudo_palindromic_paths_bit(root_l: list) -> int:
+    bt = BinaryTree()
+    bt.make_tree(root_l)
+    root = bt.root
+
+    count = 0
+
+    stack = [(root, 0)]
+    while stack:
+        node, path = stack.pop()
+        if node is not None:
+            # compute occurences of each digit
+            # in the corresponding register
+            path = path ^ (1 << node.val)
+            # if it's a leaf, check if the path is pseudo-palindromic
+            if node.left is None and node.right is None:
+                # check if at most one digit has an odd frequency
+                if path & (path - 1) == 0:
+                    count += 1
+            else:
+                stack.append((node.right, path))
+                stack.append((node.left, path))
+
+    return count
+
+
+f_l = [pseudo_palindromic_paths, pseudo_palindromic_paths_bit]
 test_data = [
     ([2, 3, 1, 3, 1, None, 1], 2),
     ([2, 1, 1, 1, 3, None, None, None, None, None, 1], 1),
@@ -119,7 +146,14 @@ def test_time(n_iter: int = 100):
             acc[j] = max(acc[j], t1 - t0)
 
     for k, f in enumerate(f_l):
-        print('\n  ', f.__name__, acc[k])  # 0.175
+        print('\n  ', f.__name__, acc[k])
+
+
+"""
+MAX TIME:
+   pseudo_palindromic_paths 0.19380431100034912
+   pseudo_palindromic_paths_bit 0.18382262099930813
+"""
 
 
 # -------------------------------
