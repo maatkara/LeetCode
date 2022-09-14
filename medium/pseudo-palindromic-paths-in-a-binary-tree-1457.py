@@ -127,7 +127,7 @@ def test_time(n_iter: int = 100):
 
 # TO README
 def test_readme():
-    topic = 'Bit manipulation'
+    topic = 'Tree'
     file_name = 'pseudo-palindromic-paths-in-a-binary-tree-1457' + 'py'
     print('\n')
     print(get_readme(string_, topic, file_name))

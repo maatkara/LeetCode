@@ -48,6 +48,6 @@ My Python LeetCode Solutions with Tests
 | 1383 | [Maximum Performance of a Team](https://leetcode.com/problems/maximum-performance-of-a-team/)                           | Heap             |        [Python](https://github.com/maatkara/LeetCode/blob/main/hard/maximum_performance_of_a_team_1383.py)        |       Hard |
 | 948  | [Bag of Tokens](https://leetcode.com/problems/bag-of-tokens/)                                                           | Two pointer      |               [Python](https://github.com/maatkara/LeetCode/blob/main/medium/bag-of-tokens-948.py)                |     Medium |
 | 393  | [UTF-8 Validation](https://leetcode.com/problems/utf-8-validation/)                                                     | Bit manipulation |              [Python](https://github.com/maatkara/LeetCode/blob/main/medium/utf-8-validation-393.py)              |     Medium |
-| 1457 | [Pseudo-Palindromic Paths in a Binary Tree](https://leetcode.com/problems/pseudo-palindromic-paths-in-a-binary-tree/)   | Bit manipulation | [Python](https://github.com/maatkara/LeetCode/blob/main/medium/pseudo-palindromic-paths-in-a-binary-tree-1457py)  |     Medium |
+| 1457 | [Pseudo-Palindromic Paths in a Binary Tree](https://leetcode.com/problems/pseudo-palindromic-paths-in-a-binary-tree/)   | Tree             | [Python](https://github.com/maatkara/LeetCode/blob/main/medium/pseudo-palindromic-paths-in-a-binary-tree-1457py)  |     Medium |
 
 
