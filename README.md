@@ -49,5 +49,6 @@ My Python LeetCode Solutions with Tests
 | 948  | [Bag of Tokens](https://leetcode.com/problems/bag-of-tokens/)                                                           | Two pointer            |               [Python](https://github.com/maatkara/LeetCode/blob/main/medium/bag-of-tokens-948.py)                |     Medium |
 | 393  | [UTF-8 Validation](https://leetcode.com/problems/utf-8-validation/)                                                     | Bit manipulation       |              [Python](https://github.com/maatkara/LeetCode/blob/main/medium/utf-8-validation-393.py)              |     Medium |
 | 1457 | [Pseudo-Palindromic Paths in a Binary Tree](https://leetcode.com/problems/pseudo-palindromic-paths-in-a-binary-tree/)   | Tree, Bit manipulation | [Python](https://github.com/maatkara/LeetCode/blob/main/medium/pseudo-palindromic-paths-in-a-binary-tree-1457py)  |     Medium |
+| 2007 | [Find Original Array From Doubled Array](https://leetcode.com/problems/find-original-array-from-doubled-array/)         | Hash                   |   [Python](https://github.com/maatkara/LeetCode/blob/main/medium/find-original-array-from-doubled-array-2007py)   |     Medium |
 
 
