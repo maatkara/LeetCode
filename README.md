@@ -52,5 +52,6 @@ My Python LeetCode Solutions with Tests
 | 2007 | [Find Original Array From Doubled Array](https://leetcode.com/problems/find-original-array-from-doubled-array/)                                   | Hash                   |         [Python](https://github.com/maatkara/LeetCode/blob/main/medium/find-original-array-from-doubled-array-2007.py)          |     Medium |
 | 1770 | [Maximum Score from Performing Multiplication Operations](https://leetcode.com/problems/maximum-score-from-performing-multiplication-operations/) | Dp                     | [Python](https://github.com/maatkara/LeetCode/blob/main/medium/maximum-score-from-performing-multiplication-operations-1770.py) |     Medium |
 | 336  | [Palindrome Pairs](https://leetcode.com/problems/palindrome-pairs/)                                                                               | String                 |                      [Python](https://github.com/maatkara/LeetCode/blob/main/hard/palindrome-pairs-336.py)                      |       Hard |
+| 11   | [Container With Most Water](https://leetcode.com/problems/container-with-most-water/)                                                             | Two pointer            |                 [Python](https://github.com/maatkara/LeetCode/blob/main/medium/container-with-most-water-11.py)                 |     Medium |
 
 
