@@ -55,5 +55,6 @@ My Python LeetCode Solutions with Tests
 | 11   | [Container With Most Water](https://leetcode.com/problems/container-with-most-water/)                                                             | Two pointer            |                 [Python](https://github.com/maatkara/LeetCode/blob/main/medium/container-with-most-water-11.py)                 |     Medium |
 | 42   | [Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/)                                                                         | Two pointer            |                     [Python](https://github.com/maatkara/LeetCode/blob/main/hard/trapping-rain-water_42.py)                     |       Hard |
 | 609  | [Find Duplicate File in System](https://leetcode.com/problems/find-duplicate-file-in-system/)                                                     | String                 |              [Python](https://github.com/maatkara/LeetCode/blob/main/medium/find-duplicate-file-in-system-609.py)               |     Medium |
+| 718  | [Maximum Length of Repeated Subarray](https://leetcode.com/problems/maximum-length-of-repeated-subarray/)                                         | Dp                     |           [Python](https://github.com/maatkara/LeetCode/blob/main/medium/maximum-length-of-repeated-subarray-718.py)            |     Medium |
 
 
