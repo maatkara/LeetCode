@@ -56,5 +56,6 @@ My Python LeetCode Solutions with Tests
 | 42   | [Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/)                                                                         | Two pointer            |                     [Python](https://github.com/maatkara/LeetCode/blob/main/hard/trapping-rain-water_42.py)                     |       Hard |
 | 609  | [Find Duplicate File in System](https://leetcode.com/problems/find-duplicate-file-in-system/)                                                     | String                 |              [Python](https://github.com/maatkara/LeetCode/blob/main/medium/find-duplicate-file-in-system-609.py)               |     Medium |
 | 718  | [Maximum Length of Repeated Subarray](https://leetcode.com/problems/maximum-length-of-repeated-subarray/)                                         | Dp                     |           [Python](https://github.com/maatkara/LeetCode/blob/main/medium/maximum-length-of-repeated-subarray-718.py)            |     Medium |
+| 985  | [Sum of Even Numbers After Queries](https://leetcode.com/problems/sum-of-even-numbers-after-queries/)                                             | Array                  |            [Python](https://github.com/maatkara/LeetCode/blob/main/medium/sum-of-even-numbers-after-queries-985.py)             |     Medium |
 
 
