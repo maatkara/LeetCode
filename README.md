@@ -59,5 +59,6 @@ My Python LeetCode Solutions with Tests
 | 985  | [Sum of Even Numbers After Queries](https://leetcode.com/problems/sum-of-even-numbers-after-queries/)                                             | Array                  |            [Python](https://github.com/maatkara/LeetCode/blob/main/medium/sum-of-even-numbers-after-queries-985.py)             |     Medium |
 | 557  | [Reverse Words in a String III](https://leetcode.com/problems/reverse-words-in-a-string-iii/)                                                     | String                 |               [Python](https://github.com/maatkara/LeetCode/blob/main/easy/reverse-words-in-a-string-iii-557.py)                |       Easy |
 | 1680 | [Concatenation of Consecutive Binary Numbers](https://leetcode.com/problems/concatenation-of-consecutive-binary-numbers/)                         | Bit manipulation       |       [Python](https://github.com/maatkara/LeetCode/blob/main/medium/concatenation-of-consecutive-binary-numbers-1680.py)       |     Medium |
+| 113  | [Path Sum II](https://leetcode.com/problems/path-sum-ii/)                                                                                         | Tree                   |                       [Python](https://github.com/maatkara/LeetCode/blob/main/medium/path-sum-ii-113.py)                        |     Medium |
 
 
