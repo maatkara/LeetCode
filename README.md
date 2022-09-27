@@ -62,5 +62,6 @@ My Python LeetCode Solutions with Tests
 | 113  | [Path Sum II](https://leetcode.com/problems/path-sum-ii/)                                                                                         | Tree                   |                       [Python](https://github.com/maatkara/LeetCode/blob/main/medium/path-sum-ii-113.py)                        |     Medium |
 | 622  | [Design Circular Queue](https://leetcode.com/problems/design-circular-queue/)                                                                     | Design, Queue          |                  [Python](https://github.com/maatkara/LeetCode/blob/main/medium/design-circular-queue-622.py)                   |     Medium |
 | 990  | [Satisfiability of Equality Equations](https://leetcode.com/problems/satisfiability-of-equality-equations/)                                       | Union                  |           [Python](https://github.com/maatkara/LeetCode/blob/main/medium/satisfiability-of-equality-equations-990.py)           |     Medium |
+| 838  | [Push Dominoes](https://leetcode.com/problems/push-dominoes/)                                                                                     | String                 |                      [Python](https://github.com/maatkara/LeetCode/blob/main/medium/push-dominoes-838.py)                       |     Medium |
 
 
