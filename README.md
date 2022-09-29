@@ -64,5 +64,6 @@ My Python LeetCode Solutions with Tests
 | 990  | [Satisfiability of Equality Equations](https://leetcode.com/problems/satisfiability-of-equality-equations/)                                       | Union                  |           [Python](https://github.com/maatkara/LeetCode/blob/main/medium/satisfiability-of-equality-equations-990.py)           |     Medium |
 | 838  | [Push Dominoes](https://leetcode.com/problems/push-dominoes/)                                                                                     | String                 |                      [Python](https://github.com/maatkara/LeetCode/blob/main/medium/push-dominoes-838.py)                       |     Medium |
 | 19   | [Remove Nth Node From End of List](https://leetcode.com/problems/remove-nth-node-from-end-of-list/)                                               | Linked List            |             [Python](https://github.com/maatkara/LeetCode/blob/main/medium/remove-nth-node-from-end-of-list-19.py)              |     Medium |
+| 658  | [Find K Closest Elements](https://leetcode.com/problems/find-k-closest-elements/)                                                                 | Binary search          |                 [Python](https://github.com/maatkara/LeetCode/blob/main/medium/find-k-closest-elements-658.py)                  |     Medium |
 
 
