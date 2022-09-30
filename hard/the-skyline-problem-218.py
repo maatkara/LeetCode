@@ -65,9 +65,7 @@ def get_skyline(buildings: list) -> list:
     ans = [[0, 0]]
     heap = [(0, float('inf'))]  # neg_h, r
 
-    print('\n', buildings)
     buildings = sorted([(l, -h, r) for l, r, h in buildings] + [(r, 0, 0) for _, r, _ in buildings])
-    print(buildings)
 
     for l, neg_h, r in buildings:
 
