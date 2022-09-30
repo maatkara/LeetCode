@@ -65,5 +65,6 @@ My Python LeetCode Solutions with Tests
 | 838  | [Push Dominoes](https://leetcode.com/problems/push-dominoes/)                                                                                     | String                 |                      [Python](https://github.com/maatkara/LeetCode/blob/main/medium/push-dominoes-838.py)                       |     Medium |
 | 19   | [Remove Nth Node From End of List](https://leetcode.com/problems/remove-nth-node-from-end-of-list/)                                               | Linked List            |             [Python](https://github.com/maatkara/LeetCode/blob/main/medium/remove-nth-node-from-end-of-list-19.py)              |     Medium |
 | 658  | [Find K Closest Elements](https://leetcode.com/problems/find-k-closest-elements/)                                                                 | Binary search          |                 [Python](https://github.com/maatkara/LeetCode/blob/main/medium/find-k-closest-elements-658.py)                  |     Medium |
+| 218  | [The Skyline Problem](https://leetcode.com/problems/the-skyline-problem/)                                                                         | Heap                   |                    [Python](https://github.com/maatkara/LeetCode/blob/main/hard/the-skyline-problem-218.py)                     |       Hard |
 
 
