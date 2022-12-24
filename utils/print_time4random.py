@@ -12,11 +12,26 @@ def print_time(f_l: list, args: None,
         n = n_max if i == n_iter - 1 else random.randint(n_min, n_max)
 
         if args is None:
-            args = [random.randint(a_min, a_max) for _ in range(n)]
+
+            if i == n_iter - 1:
+                args = (
+                    [random.randint(a_min, a_max) for _ in range(n)],
+                    #random.randint(n_min, n),
+                    random.randint(a_min, a_max)
+                    # [random.choices(string.ascii_lowercase, k=k)]
+                )
+            else:
+                args = (
+                    list(range(n)),
+                    a_max
+                    #random.randint(n_min, n),
+
+                    # [random.choices(string.ascii_lowercase, k=k)]
+                )
 
         for j, f in enumerate(f_l):
             t0 = time.perf_counter()
-            f(args)
+            f(*args)
             t1 = time.perf_counter()
 
             acc[j][0] = min(acc[j][0], t1 - t0)
@@ -33,12 +48,14 @@ def get_time_string(f_l: list, acc: list, n_iter: int):
         max_fname = max(len(f.__name__), max_fname)
 
     time_string = ''.join(('\n', ' ' * (max_fname + 4), 'min', ' ' * 6, 'mean', ' ' * 5, 'max', '\n'))
-    time_string = ''.join((time_string, '=' * (len(time_string) + 2), '\n'))
+    len1 = len(time_string) + 2
+    time_string = ''.join((time_string, '=' * len1, '\n'))
 
     for k, f in enumerate(f_l):
         n_spase = max_fname - len(f.__name__) + 1
         f_str = ''.join(
             (f'{f.__name__}', ' ' * n_spase, f'{acc[k][0]: .1e} {acc[k][1] / n_iter: .1e} {acc[k][-1]: .1e}'))
         time_string = ''.join((time_string, f_str, '\n'))
+    time_string = ''.join((time_string, '=' * len1, '\n'))
 
     return time_string
