@@ -38,6 +38,7 @@ Only one valid answer exists.
  
 
 Follow-up: Can you come up with an algorithm that is less than O(n2) time complexity?
+24.12.22
 """
 N_MAX = int(1e4)
 N_MIN = 2
