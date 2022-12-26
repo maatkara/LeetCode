@@ -1,4 +1,4 @@
-# 653. Two Sum IV - Input is a BST
+# 1679. Max Number of K-Sum Pairs
 import random
 import time
 
@@ -11,25 +11,25 @@ def print_time(f_l: list, args: None,
 
     for i in range(n_iter):
         n = n_max if i == n_iter - 1 else random.randint(n_min, n_max)
-        k = n_max * 10 if i == n_iter - 1 else random.randint(n_min // 10, n_max * 10)
+        k = a_max - n_iter + random.randint(1, n_iter) if i == n_iter - 1 else random.randint(a_min, a_max)
 
         if args is None:
-
-            if i == n_iter - 1:
-                args = (
-                    sorted(random.randint(a_min, a_max) for _ in range(n)),
-                    #random.randint(n_min, n),
-                    k
-                    # [random.choices(string.ascii_lowercase, k=k)]
-                )
-            else:
-                args = (
-                    sorted(list(range(a_min, a_max)) * 10),
-                    k
-                    #random.randint(n_min, n),
-
-                    # [random.choices(string.ascii_lowercase, k=k)]
-                )
+            args = ([random.randint(a_min, a_max) for _ in range(n)], k)
+            # if i == n_iter - 1:
+            #     args = (
+            #         [random.randint(a_min, a_max) for _ in range(n)],
+            #         #random.randint(n_min, n),
+            #         k
+            #         # [random.choices(string.ascii_lowercase, k=k)]
+            #     )
+            # else:
+            #     args = (
+            #         list(range(a_min, a_max)) * 10,
+            #         k
+            #         #random.randint(n_min, n),
+            #
+            #         # [random.choices(string.ascii_lowercase, k=k)]
+            #     )
 
         for j, f in enumerate(f_l):
             t0 = time.perf_counter()
