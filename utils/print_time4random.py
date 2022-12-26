@@ -1,4 +1,4 @@
-# 167 Two Sum II - Input Array Is Sorted
+# 653. Two Sum IV - Input is a BST
 import random
 import time
 
@@ -11,6 +11,7 @@ def print_time(f_l: list, args: None,
 
     for i in range(n_iter):
         n = n_max if i == n_iter - 1 else random.randint(n_min, n_max)
+        k = n_max * 10 if i == n_iter - 1 else random.randint(n_min // 10, n_max * 10)
 
         if args is None:
 
@@ -18,13 +19,13 @@ def print_time(f_l: list, args: None,
                 args = (
                     sorted(random.randint(a_min, a_max) for _ in range(n)),
                     #random.randint(n_min, n),
-                    random.randint(a_min, a_max)
+                    k
                     # [random.choices(string.ascii_lowercase, k=k)]
                 )
             else:
                 args = (
                     sorted(list(range(a_min, a_max)) * 10),
-                    a_max
+                    k
                     #random.randint(n_min, n),
 
                     # [random.choices(string.ascii_lowercase, k=k)]
