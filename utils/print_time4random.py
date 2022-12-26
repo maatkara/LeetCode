@@ -1,3 +1,4 @@
+# 167 Two Sum II - Input Array Is Sorted
 import random
 import time
 
@@ -15,14 +16,14 @@ def print_time(f_l: list, args: None,
 
             if i == n_iter - 1:
                 args = (
-                    [random.randint(a_min, a_max) for _ in range(n)],
+                    sorted(random.randint(a_min, a_max) for _ in range(n)),
                     #random.randint(n_min, n),
                     random.randint(a_min, a_max)
                     # [random.choices(string.ascii_lowercase, k=k)]
                 )
             else:
                 args = (
-                    list(range(n)),
+                    sorted(list(range(a_min, a_max)) * 10),
                     a_max
                     #random.randint(n_min, n),
 
