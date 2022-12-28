@@ -1,35 +1,14 @@
-# 1679. Max Number of K-Sum Pairs
-import random
+# 15. 3Sum
 import time
 
 
-def print_time(f_l: list, args: None,
-               n_max: int = None, a_max: int = None,
-               n_min: int = 0, a_min: int = 0,
+def print_time(f_l: list, get_args,
                n_iter: int = 100):
     acc = [[float('inf'), 0, float('-inf')] for _ in f_l]
 
     for i in range(n_iter):
-        n = n_max if i == n_iter - 1 else random.randint(n_min, n_max)
-        k = a_max - n_iter + random.randint(1, n_iter) if i == n_iter - 1 else random.randint(a_min, a_max)
 
-        if args is None:
-            args = ([random.randint(a_min, a_max) for _ in range(n)], k)
-            # if i == n_iter - 1:
-            #     args = (
-            #         [random.randint(a_min, a_max) for _ in range(n)],
-            #         #random.randint(n_min, n),
-            #         k
-            #         # [random.choices(string.ascii_lowercase, k=k)]
-            #     )
-            # else:
-            #     args = (
-            #         list(range(a_min, a_max)) * 10,
-            #         k
-            #         #random.randint(n_min, n),
-            #
-            #         # [random.choices(string.ascii_lowercase, k=k)]
-            #     )
+        args = get_args(i)
 
         for j, f in enumerate(f_l):
             t0 = time.perf_counter()
