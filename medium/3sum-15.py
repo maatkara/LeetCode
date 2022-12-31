@@ -39,6 +39,23 @@ Constraints:
 -10^5 <= nums[i] <= 10^5
 
 Acceptance Rate 32.4%
+
+Solution:
+---------------
+2 hash sets | O(n^2)
+Dec 27, 2022
+
+Intuition
+ - Use num[i] as target in task two sum.
+ - For each num[i] in the loop through the remaining elements of the array, use 2 sets to store elements that
+
+    - inappropriate (h),
+    - used (h_used).
+    
+Complexity
+Time complexity: O(n^2)
+Space complexity: O(n)
+
 27.12.22
 """
 N_MAX = int(3e3)
