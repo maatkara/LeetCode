@@ -2,7 +2,7 @@
 
 My Python LeetCode Solutions with Tests
 
-[LeetCode profile](https://leetcode.com/maatkara/)  <img src = "img.png" width = "30" height = "30"/>
+[LeetCode profile](https://leetcode.com/maatkara/)  <img src = "img.png" width = "30" height = "30"/><img src = "2022-annual-50.png" width = "30" height = "30"/>
 
 ## Priorities:
 
