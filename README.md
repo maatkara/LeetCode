@@ -2,7 +2,7 @@
 
 My Python LeetCode Solutions with Tests
 
-[LeetCode profile](https://leetcode.com/maatkara/)  <img src = "img.png" width = "30" height = "30"/><img src = "2022-annual-50.png" width = "30" height = "30"/>
+[LeetCode profile](https://leetcode.com/maatkara/)  <img src = "img.png" width = "30" height = "30"/> <img src = "2022-annual-50.png" width = "30" height = "30"/>
 
 ## Priorities:
 
@@ -74,3 +74,4 @@ My Python LeetCode Solutions with Tests
 | 18   | [4Sum](https://leetcode.com/problems/4sum/)                                                                                                       | Hash                   |                           [Python](https://github.com/maatkara/LeetCode/blob/main/medium/4sum-18.py)                            |     Medium |
 | 1480 | [Running Sum of 1d Array](https://leetcode.com/problems/running-sum-of-1d-array/)                                                                 | Array                  |                  [Python](https://github.com/maatkara/LeetCode/blob/main/easy/running-sum-of-1d-array-1480.py)                  |       Easy |
 | 724  | [Find Pivot Index](https://leetcode.com/problems/find-pivot-index/)                                                                               | Array                  |                      [Python](https://github.com/maatkara/LeetCode/blob/main/easy/find-pivot-index-724.py)                      |       Easy |
+| 205  | [Isomorphic Strings](https://leetcode.com/problems/isomorphic-strings/)                                                                           | String, Hash           |                       [Python](https://github.com/maatkara/LeetCode/blob/main/easy/isomorphic-strings.py)                       |       Easy |
