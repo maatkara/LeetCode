@@ -51,7 +51,7 @@ def is_isomorphic1(s: str, t: str) -> bool:  # sub
 
     hs = dict()
     ht = dict()
-    hs.get()
+
     for cs, ct in zip(s, t):
         if (cs in hs and hs[cs] != ct) or (ct in ht and ht[ct] != cs):
             return False
