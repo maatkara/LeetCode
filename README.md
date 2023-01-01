@@ -6,8 +6,8 @@ My Python LeetCode Solutions with Tests
 
 ## Priorities:
 
-1. Running **Time**
-2. Used **Memory**
+1. **Time complexity**
+2. Space complexity
 3. Code **Readability** vs Code Brevity
 
 ## LeetCode Algorithm
