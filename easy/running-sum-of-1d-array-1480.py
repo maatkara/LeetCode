@@ -109,7 +109,7 @@ O(n) ~ 1e-5
 def test_readme():
     from utils.make_string import get_readme
 
-    topic = 'Hash'
+    topic = 'Array'
     file_name = "running-sum-of-1d-array-1480.py"
 
     print('\n')
