@@ -37,4 +37,4 @@ def bild_linked_list(arr: list):
     llist = LinkedList()
     for x in reversed(arr):
         llist.add_node(x)
-    return llist
+    return llist.head
