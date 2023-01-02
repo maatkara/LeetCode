@@ -1,8 +1,7 @@
-import sys
-
-import pytest
 import random
 import time
+
+import pytest
 
 from utils.linked_list import *
 
@@ -41,8 +40,9 @@ X_MAX = 5000  # +-
 
 
 def reverse_list(arr: list, is_debug=True) -> LinkedList:
-    llist = bild_linked_list(arr)
-    head = llist.head  # not for LC
+    # only for testing/ not for LC
+    head = bild_linked_list(arr)
+    # -----------------
 
     if is_debug:
         print(f'\n{arr}')
@@ -60,11 +60,10 @@ def reverse_list(arr: list, is_debug=True) -> LinkedList:
         if is_debug:
             print(f'prev: {prev.val}, cur: {cur.val}' if cur else f'prev: {prev.val}, cur: {cur}')
 
-    llist.head = prev  # for test, not for LC
     if is_debug:
-        print(f'Linked list: {llist}')
+        print(f'Linked list: {prev}')
 
-    return llist  # prev -> to leetcode.com
+    return prev
 
 
 a_l = [random.randint(-X_MAX, X_MAX) for _ in range(1, N_MAX + 1)]
@@ -81,10 +80,8 @@ test_data = [
 def test(arr, expected):
     f = reverse_list
     is_debug = True if len(arr) <= 20 else False
-    data = f(arr, is_debug=is_debug)
-    expected = bild_linked_list(expected)
-    node1 = data.head
-    node2 = expected.head
+    node1 = f(arr, is_debug=is_debug)
+    node2 = bild_linked_list(expected)
 
     while node2 or node1:
         assert node1.val == node2.val

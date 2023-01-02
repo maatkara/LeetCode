@@ -1,6 +1,9 @@
-import time
-import pytest
 import random
+import time
+
+import pytest
+
+from utils.linked_list import bild_linked_list, ListNode
 
 """
 876. Middle of the Linked List
@@ -38,43 +41,9 @@ N_MAX = int(1e2)
 X_MAX = 100
 
 
-class ListNode:
-    def __init__(self, val=0, next=None):
-        self.val = val  # contains the data
-        self.next = next  # contains the reference to the next node
-
-
-# Creatively redesigned code from https://stackoverflow.com/questions/280243/python-linked-list
-class LinkedList:
-    def __init__(self):
-        self.head = None
-
-    def add_node(self, val):
-        new_node = ListNode(val, self.head)  # create a new node
-        self.head = new_node                 # set the current node to the new one.
-
-    def __str__(self):
-        node = self.head
-        _str = ''  # [1->2, 2->3, 3->4, 4->5, 5->None]
-        while node:
-            _str += f'{node.val}->'
-            node = node.next
-        return _str + 'None'
-
-
-def bild_linked_list(arr: list):
-    """ Bild the singly linked list """
-
-    llist = LinkedList()
-    for x in reversed(arr):
-        llist.add_node(x)
-    return llist
-
-
-def middle_node(arr: list, is_debug=False) -> LinkedList:
+def middle_node(arr: list, is_debug=False) -> ListNode:
     """ Return the middle node of the singly linked list """
-    llist = bild_linked_list(arr)
-    head = llist.head
+    head = bild_linked_list(arr)
 
     fast = head
     slow = head
@@ -87,10 +56,9 @@ def middle_node(arr: list, is_debug=False) -> LinkedList:
         if is_debug:
             print(f'fast: {fast.val}, slow: {slow.val}' if fast else f'fast: {fast}, slow: {slow.val}')
 
-    llist.head = slow  # for compatibility to my LinkedList and tests
     if is_debug:
-        print(f'Linked list: {llist}')
-    return llist  # slow -> to leetcode.com
+        print(f'Linked list: {head}')
+    return slow
 
 
 test_data = [
@@ -105,10 +73,8 @@ test_data = [
 @pytest.mark.parametrize('arr, expected', test_data)
 def test(arr, expected):
     f = middle_node
-    data = f(arr)
-    expected = bild_linked_list(expected)
-    node1 = data.head
-    node2 = expected.head
+    node1 = f(arr)
+    node2 = bild_linked_list(expected)
 
     while node1 and node2:
         assert node1.val == node2.val

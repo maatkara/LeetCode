@@ -1,3 +1,5 @@
+from typing import Optional
+
 import pytest
 
 from utils.linked_list import ListNode, bild_linked_list
@@ -36,17 +38,15 @@ Follow up: Could you do this in one pass?
 28.9.22
 """
 N_MAX = 30
-N_MIX = 1
-# n <= N_MAX
+N_MIN = 1
 
 A_MIN = 0
 A_MAX = 100
 
 
-def remove_nth_from_end(head_l: list, n: int) -> ListNode:
+def remove_nth_from_end(head_l: list, n: int) -> Optional[ListNode]:
     # only for testing/ not for LC
-    llist = bild_linked_list(head_l)
-    head = llist.head
+    head = bild_linked_list(head_l)
     # ----------------------
     # print(head)
 
@@ -91,9 +91,7 @@ def test(head_l, n, expected):
     for i, f in enumerate(f_l):
 
         node1 = f(head_l, n)
-        expected = bild_linked_list(expected)
-        # node1 = data.head
-        node2 = expected.head
+        node2 = bild_linked_list(expected)
         print('\n', f.__name__, node1.val if node1 else 'None')
 
         while node2:
@@ -101,21 +99,33 @@ def test(head_l, n, expected):
             node1 = node1.next
             node2 = node2.next
 
+        assert node1 is None
+
 
 def test_time(n_iter: int = 100):
     from utils.print_time4random import print_time
+    from random import randint
+    import numpy as np
 
-    print_time(f_l, args=None,
-               n_max=N_MAX, a_max=A_MAX,
-               n_min=N_MIX, a_min=A_MIN,
-               n_iter=n_iter)
+    def get_args(i: int,
+                 n_max: int = N_MAX, a_max: int = A_MAX,
+                 n_min: int = N_MIN, a_min: int = A_MIN,
+                 ) -> tuple:
+        sz = n_max if i == n_iter - 1 else randint(n_min, n_max)
+        n = n_max if i == n_iter - 1 else randint(n_min, n_max)
+        list1 = np.random.randint(a_min, a_max, size=sz).tolist()
+
+        return list1, n
+
+    print_time(f_l, get_args, n_iter)
 
 
 """
 TIME:
                        min      mean     max
 ================================================
-remove_nth_from_end  4.5e-06  4.6e-06  8.0e-06
+remove_nth_from_end  1.4e-06  1.0e-05  2.3e-05
+================================================
 """
 
 

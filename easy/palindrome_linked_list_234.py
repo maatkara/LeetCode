@@ -1,6 +1,7 @@
-import pytest
 import random
 import time
+
+import pytest
 
 from utils.linked_list import *
 
@@ -45,8 +46,8 @@ def is_palindrome(arr: list, is_debug=True) -> bool:
     :param is_debug: for printing if debug
     """
 
-    llist = bild_linked_list(arr)  # not for LC
-    head = llist.head  # not for LC
+    head = bild_linked_list(arr)  # not for LC
+    # head = llist.head  # not for LC
 
     # Find the middle of LL (# 876)
     fast = head
