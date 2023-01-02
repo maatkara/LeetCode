@@ -76,10 +76,12 @@ def test(arr, expected):
     node1 = f(arr)
     node2 = bild_linked_list(expected)
 
-    while node1 and node2:
+    while node2:
         assert node1.val == node2.val
         node1 = node1.next
         node2 = node2.next
+
+    assert node1 is None
 
 
 def test_time(n_iter=100):
