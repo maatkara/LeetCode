@@ -1,5 +1,5 @@
 import random
-import time
+from typing import Optional
 
 import pytest
 
@@ -34,12 +34,16 @@ The number of nodes in the list is the range [0, 5000].
 
 Follow up: A linked list can be reversed either iteratively or recursively. Could you implement both?
 22.08.2022
+02.01.23 change testing functions
 """
 N_MAX = 5000
-X_MAX = 5000  # +-
+N_MIN = 0
+
+A_MAX = 5000
+A_MIN = -5000
 
 
-def reverse_list(arr: list, is_debug=True) -> LinkedList:
+def reverse_list(arr: list, is_debug=False) -> Optional[ListNode]:
     # only for testing/ not for LC
     head = bild_linked_list(arr)
     # -----------------
@@ -66,7 +70,9 @@ def reverse_list(arr: list, is_debug=True) -> LinkedList:
     return prev
 
 
-a_l = [random.randint(-X_MAX, X_MAX) for _ in range(1, N_MAX + 1)]
+f_l = [reverse_list]
+a_l = [random.randint(A_MIN, A_MAX) for _ in range(1, N_MAX + 1)]
+
 test_data = [
     ([1, 2, 3, 4, 5], [5, 4, 3, 2, 1]),
     ([-1, -2, -3, -4, -5], [-5, -4, -3, -2, -1]),
@@ -78,28 +84,42 @@ test_data = [
 
 @pytest.mark.parametrize('arr, expected', test_data)
 def test(arr, expected):
-    f = reverse_list
-    is_debug = True if len(arr) <= 20 else False
-    node1 = f(arr, is_debug=is_debug)
-    node2 = bild_linked_list(expected)
+    for i, f in enumerate(f_l):
+        ans = f(arr)
+        expected = bild_linked_list(expected)
+        print('\n', f.__name__, ans.val if ans else 'None')
 
-    while node2 or node1:
-        assert node1.val == node2.val
-        node1 = node1.next
-        node2 = node2.next
+        while expected:
+            assert ans.val == expected.val
+            ans = ans.next
+            expected = expected.next
+
+        assert ans is None
 
 
-def test_time(n_iter=100):
-    f = reverse_list
-    acc = 0
-    for _ in range(n_iter):
-        arr = [random.randint(-X_MAX, X_MAX) for _ in range(1, N_MAX + 1)]
-        t0 = time.perf_counter()
-        f(arr, is_debug=False)
-        t1 = time.perf_counter()
+def test_time(n_iter: int = 100):
+    from utils.print_time4random import print_time
+    from random import randint
+    import numpy as np
 
-        acc = max(acc, t1 - t0)
+    def get_args(i: int,
+                 n_max: int = N_MAX, a_max: int = A_MAX,
+                 n_min: int = N_MIN, a_min: int = A_MIN,
+                 ) -> tuple:
+        sz1 = n_max if i == n_iter - 1 else randint(n_min, n_max)
+        list1 = np.random.randint(a_min, a_max, size=sz1).tolist()
 
-    print('\n', acc)  # 0.04
+        return list1,
 
-    assert acc < 0.1
+    print_time(f_l, get_args, n_iter)
+
+
+"""
+TIME:
+                min      mean     max
+=========================================
+reverse_list  4.5e-06  2.0e-03  2.7e-02
+=========================================
+
+O(n) ~ 1e-4
+"""
