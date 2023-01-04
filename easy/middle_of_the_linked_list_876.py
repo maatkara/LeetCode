@@ -1,5 +1,6 @@
 import random
 import time
+from typing import Optional
 
 import pytest
 
@@ -38,7 +39,7 @@ N_MAX = int(1e2)
 X_MAX = 100
 
 
-def middle_node(arr: list) -> ListNode:
+def middle_node(arr: list) -> Optional[ListNode]:
     """ Return the middle node of the singly linked list """
     head = bild_linked_list(arr)  # for testing only | not for LC
     # ---------------------------
