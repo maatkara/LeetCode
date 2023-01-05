@@ -16,7 +16,7 @@ class NaryTree:
 
     Example:
         ----------
-        [1,null,3,2,4,null,5,6]
+        [1,null,3,2,4,null,null,5,6]
            1
          / | \
         3  2  4
