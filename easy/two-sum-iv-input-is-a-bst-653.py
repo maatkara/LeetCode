@@ -80,9 +80,6 @@ test_data = [
 
     ([0] * 10, 2, False),
     (sorted(randint(A_MIN, A_MAX) for _ in range(N_MAX)), K_MAX, False),
-    # ([0] * (N_MAX - 2) + [1, 1], 2, [N_MAX - 1, N_MAX]),
-    # ([A_MIN] * (N_MAX // 2 - 1) + [1, 1] + [A_MAX] * (N_MAX // 2 - 1), 2, [N_MAX // 2, N_MAX // 2 + 1]),
-    # (list(range(N_MAX - 2)) + [N_MAX - 2, N_MAX - 1], 2 * N_MAX - 3, [N_MAX - 1, N_MAX]),
 ]
 
 f_l = [find_target]
