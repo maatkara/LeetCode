@@ -36,13 +36,58 @@ class BinaryTree:
             i += 1
 
         self.root = root_l[0] if root_l else None
+        return self.root
 
     @staticmethod
     def add_node(x):
         return TreeNode(x) if x is not None else None
 
+    def __str__(self, with_projection=True):
+        projection = self._get_projection()
 
-def tree_by_level(root: TreeNode) -> defaultdict:
+        cur = 0
+        str_d, staff_d = defaultdict(str), defaultdict(str)
+
+        for val, is_right, is_leaf, level in projection:
+
+            # val
+            si = cur - len(str_d[level])
+            su = cur - len(staff_d[level + 1])  # _
+            su = 0 if is_leaf or su >= si else su
+            str_d[level] += ' ' * (si - su) + '_' * su + str(val)  # val
+
+            # staff
+            si = cur - len(staff_d[level])
+            if is_right:
+                staff_d[level] += ' ' * (si - 1) + '\\'
+                str_d[level - 1] += (cur - len(str_d[level - 1]) - 1) * '_'
+            else:
+                staff_d[level] += ' ' * (si + len(str(val))) + '/'
+
+            cur += len(str(val)) + 1
+
+        staff_d[0] = ''
+        str_ = ''
+        for i in range(len(str_d)):
+            str_ = ''.join((str_, staff_d[i], '\n'))
+            str_ = ''.join((str_, str_d[i], '\n'))
+
+        if with_projection:
+            str_ += ' '.join((str(val) for val, _, _, _ in projection))
+
+        return str_
+
+    def _get_projection(self) -> list:
+        def dfs(node: TreeNode, is_right=False, is_leaf=False, level=0):
+            return (dfs(node.left, level=level + 1) +
+                    [(node.val, is_right, (node.right is None and node.left is None), level)] +
+                    dfs(node.right, is_right=True, level=level + 1) if node else []
+                    )
+
+        return dfs(self.root)
+
+
+def tree_by_level(root: TreeNode) -> dict:
     root_levels = defaultdict(list)
     root_levels[0] = [root.val]
 
