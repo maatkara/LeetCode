@@ -32,7 +32,7 @@ All the integers in nums are **unique**.
 nums is sorted in ascending order.
 
 Time complexity: O(log n)
-Space complexity: O(n)
+Space complexity: O(1)
 
 06.01.23
 """
