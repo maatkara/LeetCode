@@ -54,7 +54,6 @@ def level_order(root_l: Optional[list[int]]) -> list[list[int]]:
     root = bt.make_tree(root_l)
 
     # -----------------------------
-    ans = []
     level_d = defaultdict(list)
 
     def dfs(node: TreeNode, level=0):
