@@ -154,7 +154,7 @@ flood_fill  2.3e-06  2.9e-05  2.3e-03
 def test_readme():
     from utils.make_string import get_readme
 
-    topic = 'Tree'
+    topic = 'Graph, DFS'
     file_name = 'flood-fill-733.py'
 
     print('\n')
