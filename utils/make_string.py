@@ -11,7 +11,7 @@ file_name = 'rotate_image_48.py'
 
 
 def get_readme(string, topic, file_name):
-    github_link = "[Python](https://github.com/maatkara/LeetCode/blob/main/"
+    github_link = "[Solution](https://github.com/maatkara/LeetCode/blob/main/"
 
     str_l = string.split('\n')[1:4]
     github_link += f'{str_l[-1].lower()}/{file_name})'
