@@ -52,10 +52,15 @@ A_MIN = -int(1e9)
 
 
 def lowest_common_ancestor_rec(root_l: list[int], p: int, q: int) -> TreeNode:
+    """! Only for example:  Process finished with exit code 139 (SIGSEGV) - ~recursion related error N_MAX=int(1e5)"""
     # bild_tree  ! only for testing, not for LC
     bt = BinaryTree()
     root = bt.make_tree(root_l)
     left, right = min(q, p), max(q, p)
+
+    assert q != p, f'Error: q=p {q}={p}'
+    assert q is not None and p is not None, f'Error: q={q}, p={p}'
+    assert len(root_l) > 1, f'Number of nodes less 2'
 
     # -----------------------------
 
@@ -78,6 +83,10 @@ def lowest_common_ancestor_iter(root_l: list[int], p: int, q: int) -> TreeNode: 
     bt = BinaryTree()
     root = bt.make_tree(root_l)
     left, right = min(q, p), max(q, p)
+
+    assert q != p, f'Error: q=p {q}={p}'
+    assert q is not None and p is not None, f'Error: q={q}, p={p}'
+    assert len(root_l) > 1, f'Number of nodes less 2'
     # -----------------------------
 
     # left, right = min(q.val, p.val), max(q.val, p.val) ! for LC
@@ -102,7 +111,7 @@ test_data = [
 
 ]
 
-f_l = [lowest_common_ancestor_rec, lowest_common_ancestor_iter]
+f_l = [lowest_common_ancestor_iter]  # lowest_common_ancestor_rec,
 
 
 @pytest.mark.parametrize('root_l, p, q, expected', test_data)
@@ -117,15 +126,27 @@ def test(root_l: list[int], p: int, q: int, expected: int):
 def test_time(n_iter: int = 100):
     from utils.print_time4random import print_time
     from random import randint
+    #sys.setrecursionlimit(10000)
 
     def get_args(i: int) -> tuple:
         n = N_MAX if i == n_iter - 1 else randint(N_MIN, N_MAX)
         arr = []
-        for x in sorted(random.choices(range(A_MIN, A_MAX), k=n)):
+        ar = sorted(set(random.choices(range(A_MIN, A_MAX), k=n//2)))
+        if len(ar) == 1:
+            ar.append(ar[-1] + 1)
+        for x in ar:
             arr.extend((x, None))
 
         arr = arr[:-1]
-        p, q = arr[0], arr[-1]
+        p = arr[-1]
+        if i == n_iter -1:
+            q = arr[-3]
+        else:
+            q = random.choice(arr[:-1])
+        while q is None:
+            q = random.choice(arr)
+
+        assert p in arr and q in arr and p != q
         return arr, p, q
 
     print_time(f_l, get_args, n_iter)
@@ -135,8 +156,8 @@ def test_time(n_iter: int = 100):
 TIME:
                                min      mean     max
 ========================================================
-lowest_common_ancestor_rec   1.8e-04  6.4e-02  1.5e-01
-lowest_common_ancestor_iter  1.5e-04  6.2e-02  1.3e-01  sub
+lowest_common_ancestor_rec                             Process finished with exit code 139 (SIGSEGV)
+lowest_common_ancestor_iter  6.6e-04  2.8e-02  7.0e-02 sub
 ========================================================
 
 """
