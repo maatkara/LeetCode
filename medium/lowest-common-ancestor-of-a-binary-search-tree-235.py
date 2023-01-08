@@ -126,25 +126,29 @@ def test(root_l: list[int], p: int, q: int, expected: int):
 def test_time(n_iter: int = 100):
     from utils.print_time4random import print_time
     from random import randint
-    #sys.setrecursionlimit(10000)
+    # import sys
+
+    # sys.setrecursionlimit(10000)
 
     def get_args(i: int) -> tuple:
         n = N_MAX if i == n_iter - 1 else randint(N_MIN, N_MAX)
         arr = []
-        ar = sorted(set(random.choices(range(A_MIN, A_MAX), k=n//2)))
+        ar = sorted(set(random.choices(range(A_MIN, A_MAX), k=n)))
         if len(ar) == 1:
             ar.append(ar[-1] + 1)
+
+        if i % 2:
+            ar = ar[::-1]  # reversed - left tree
+
         for x in ar:
             arr.extend((x, None))
-
         arr = arr[:-1]
-        p = arr[-1]
-        if i == n_iter -1:
-            q = arr[-3]
+
+        p = ar[-1]
+        if i == n_iter - 1:
+            q = ar[-2]
         else:
-            q = random.choice(arr[:-1])
-        while q is None:
-            q = random.choice(arr)
+            q = random.choice(ar[:-1])
 
         assert p in arr and q in arr and p != q
         return arr, p, q
@@ -157,9 +161,8 @@ TIME:
                                min      mean     max
 ========================================================
 lowest_common_ancestor_rec                             Process finished with exit code 139 (SIGSEGV)
-lowest_common_ancestor_iter  6.6e-04  2.8e-02  7.0e-02 sub
+lowest_common_ancestor_iter  1.0e-03  6.5e-02  1.5e-01 sub
 ========================================================
-
 """
 
 
