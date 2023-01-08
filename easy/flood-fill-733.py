@@ -46,7 +46,7 @@ n == image[i].length
 0 <= sr < m
 0 <= sc < n
 
-Time complexity: O(h), h - tree height
+Time complexity: O(n)
 Space complexity: O(n) - recursive
 
 08.01.23
