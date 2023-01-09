@@ -35,7 +35,7 @@ Constraints:
 0 <= n <= 30
 
 Time complexity: O(n)
-Space complexity: O(n)
+Space complexity: O(1) fib_space, O(n) fib
 
 09.01.23
 """
@@ -54,6 +54,17 @@ def fib(n: int) -> int:
     return d[n]
 
 
+def fib_space(n: int) -> int:
+    assert n >= 0, f'n must be >=0, got {n}'
+
+    prev, cur = 0, 1
+
+    for _ in range(2, n + 1):
+        prev, cur = cur, cur + prev
+
+    return cur if n else 0
+
+
 test_data = [
     (2, 1),
     (3, 2),
@@ -63,7 +74,7 @@ test_data = [
     (6, 8)
 ]
 
-f_l = [fib]
+f_l = [fib, fib_space]
 
 
 @pytest.mark.parametrize('n, expected', test_data)
@@ -89,10 +100,12 @@ def test_time(n_iter: int = 100):
 
 """
 TIME: 
-       min      mean     max
-================================
-fib  3.9e-07  1.6e-06  3.9e-06
-================================
+             min      mean     max
+======================================
+fib        4.2e-07  1.9e-06  1.6e-05
+fib_space  3.1e-07  8.5e-07  1.3e-06
+======================================
+
 """
 
 
