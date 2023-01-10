@@ -62,7 +62,7 @@ def fib_space(n: int) -> int:
     for _ in range(2, n + 1):
         prev, cur = cur, cur + prev
 
-    return cur if n else 0
+    return cur if n > 1 else n
 
 
 test_data = [
