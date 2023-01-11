@@ -66,16 +66,14 @@ def min_cost_climbing_stairs(cost: list[int]) -> int:
     return d[n]
 
 
-def min_cost_climbing_stairs_space(cost: list[int]) -> int:
+def min_cost_climbing_stairs_space(cost: list[int]) -> int:  # sub
     """ Memory efficient"""
-    n = len(cost)
-    assert n > 1, f'len(cost) must be positive, got {n}'
+    assert len(cost) > 1, f'len(cost) must be positive, got {len(cost)}'
 
-    prev = cost[0]
-    cur = cost[1]
+    prev, cur = cost[0], cost[1]
     cost += [0]  # add 'top'
 
-    for i in range(2, n + 1):
+    for i in range(2, len(cost)):
         prev, cur = cur, min(prev, cur) + cost[i]
 
     return cur
@@ -122,8 +120,8 @@ def test_time(n_iter: int = 100):
 TIME: 
                                   min      mean     max
 ===========================================================
-min_cost_climbing_stairs        2.0e-06  1.1e-04  2.1e-04
-min_cost_climbing_stairs_space  1.4e-06  7.7e-05  1.8e-04 sub
+min_cost_climbing_stairs        4.0e-06  1.1e-04  2.4e-04
+min_cost_climbing_stairs_space  2.7e-06  7.6e-05  1.5e-04 sub
 ===========================================================
 
 """
