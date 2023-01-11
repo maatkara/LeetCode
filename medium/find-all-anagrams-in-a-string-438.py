@@ -37,8 +37,8 @@ Constraints:
 1 <= s.length, p.length <= 3 * 10^4
 s and p consist of lowercase English letters.
 
-Time complexity: O()
-Space complexity: O()
+Time complexity: O(n)
+Space complexity: O(1)
 
 10.01.23
 """
