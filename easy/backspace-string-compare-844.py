@@ -46,28 +46,6 @@ N_MAX = int(2e2)
 N_MIN = 1
 
 
-def backspace_compare_old(s: str, t: str) -> bool:
-    """ TC: O(n), SC:  O(1)"""
-
-    i, j = len(s) - 1, len(t) - 1
-    skip_s = skip_t = 0
-
-    while i >= 0 and j >= 0:
-        if s[i] == '#' or t[j] == '#':
-            skip_s += (s[i] == '#')
-            skip_t += (s[i] == '#')
-        elif skip_s or skip_t:
-            skip_s -= 1 * skip_s
-            skip_t -= 1 * skip_t
-        elif s[i] == t[j]:
-            i -= 1
-            j -= 1
-        else:
-            return False
-
-    return i == j
-
-
 def backspace_compare_stack(s: str, t: str) -> bool:
     """ Stack. TC O(n+m) SC = O(n+m) """
 
