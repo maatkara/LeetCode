@@ -41,11 +41,19 @@ Follow-up: Could you solve it in O(n log(k)) time and O(n) extra space?
 Solution:
 What Time Complexity for heapq.nsmallest(k, ws)?
 
-heapq.nsmallest is O(k + (n - k)logk). 
-It creates a max-heap with k elements and then iterates over the remaining n - k elements, 
-only adding them to the list if they are smaller than the heap's max element. 
-This way when the loop is done, heap will consist of k smallest elements.
+# Why is `nsmallest` time complexity O(n log k)?
 
+
+What's under the hood?
+1. First **heapify_max for k** list elsements - 
+[transform list into a maxheap](https://github.com/python/cpython/blob/206f05a46b426eb374f724f8e7cd42f2f9643bb8/Lib/heapq.py#L505) TC ~ `O(k)`
+2. Next, we iterate over the remaining n-k elements and put it on the heap (replacement) **only** 
+if the element is < the maximum element of the heap. TC < `O((n-k) * log k)`
+3. Sort the result in ascending order ~ O(k log k).
+
+Thus:  O(k) + O((n-k) log k) + O(k log k) = `O(n log k)`
+
+[Source heapq.nsmallest](https://github.com/python/cpython/blob/main/Lib/heapq.py#L452)
 
 14.01.23
 """
@@ -57,7 +65,7 @@ A_MIN = 1
 
 
 def top_k_frequent(words: list[str], k: int) -> list[str]:
-    """ Stack. TC O(n log k) SC = O(n) """
+    """ TC O(n log k) SC = O(n) """
     words = [(-f, w) for w, f in Counter(words).items()]  # O(n)
 
     return [w for _, w in heapq.nsmallest(k, words)]  # O(k + (n - k)log k) < O(n log k)
