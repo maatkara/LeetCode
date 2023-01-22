@@ -4,7 +4,6 @@ My Python LeetCode Solutions with Tests
 
 [LeetCode profile](https://leetcode.com/maatkara/)  <img src = "img.png" width = "30" height = "30"/> <img src = "2022-annual-50.png" width = "30" height = "30"/> <img src = "LC75.png" width = "30" height = "30"/>
 
-
 ## Priorities:
 
 1. **Time complexity**
@@ -100,4 +99,5 @@ My Python LeetCode Solutions with Tests
 | 394  | [Decode String](https://leetcode.com/problems/decode-string/)                                                                                     | Stack                  |                      [Solution](https://github.com/maatkara/LeetCode/blob/main/medium/decode-string-394.py)                       |     Medium |
 | 1046 | [Last Stone Weight](https://leetcode.com/problems/last-stone-weight/)                                                                             | Heap                   |                     [Solution](https://github.com/maatkara/LeetCode/blob/main/easy/last-stone-weight-1046.py)                     |       Easy |
 | 692  | [Top K Frequent Words](https://leetcode.com/problems/top-k-frequent-words/)                                                                       | Heap                   |                   [Solution](https://github.com/maatkara/LeetCode/blob/main/medium/top-k-frequent-words-692.py)                   |     Medium |
+| 217  | [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/)                                                                           | Array                  |                     [Solution](https://github.com/maatkara/LeetCode/blob/main/easy/contains-duplicate-217.py)                     |       Easy |
 
