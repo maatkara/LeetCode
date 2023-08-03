@@ -137,8 +137,8 @@ integer2roman  1.0e-06  2.1e-06  4.5e-06
 def test_readme():
     from utils.make_string import get_readme
 
-    topic = 'Array'
-    file_name = '../easy/roman_to_integer_13.py'
+    topic = 'String'
+    file_name = 'integer-to-roman-12.py'
 
     print('\n')
     print(get_readme(string_, topic, file_name))
