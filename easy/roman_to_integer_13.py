@@ -1,9 +1,12 @@
-import time
-
-import pytest
 import random
 
-"""
+import pytest
+
+string_ = """
+13. Roman to Integer
+https://leetcode.com/problems/roman-to-integer/
+Easy
+
 13. Roman numerals are represented by seven different symbols: I, V, X, L, C, D and M.
 
 Symbol       Value
@@ -58,9 +61,13 @@ It is guaranteed that s is a valid roman numeral in the range [1, 3999].
 """
 
 N_MAX = 15
-simbols_d = {'I': 1, 'V': 5, 'X': 10, 'L': 50, 'C': 100, 'D': 500, 'M': 1000}
+N_MIN = 1
+
+simbols_d = dict(I=1, V=5, X=10, L=50, C=100, D=500, M=1000)
 s_big_l = ['V', 'X', 'L', 'C', 'D', 'M']
 s_small_l = ['I', 'X', 'C']
+
+# {'C': 'X', 'D': 'C', 'L': 'X', 'M': 'C', 'V': 'I', 'X': 'I'}  # big : small
 prev_d = {prev: s_small_l[i // 2] for i, prev in enumerate(s_big_l)}
 
 
@@ -83,22 +90,45 @@ test_data = [
     ("I", 1),
 ]
 
+f_l = [roman2integer]
+
 
 @pytest.mark.parametrize('s, expected', test_data)
 def test(s, expected):
-    assert roman2integer(s) == expected
+    for f in f_l:
+        ans = f(s)
+        print('\n', f.__name__, ans)
+
+        assert ans == expected
 
 
-def test_time(n_iter=100):
-    f = roman2integer
-    acc = 0
-    for _ in range(n_iter):
-        s = ''.join([random.choice(list(simbols_d.keys())) for _ in range(1, N_MAX + 1)])
-        t0 = time.perf_counter()
-        f(s)
-        t1 = time.perf_counter()
+def test_time(n_iter: int = 100):
+    from utils.print_time4random import print_time
 
-        acc = max(acc, t1 - t0)
-    print('\n', acc)
+    def get_args(i: int) -> tuple:
+        n: int = N_MAX if i == n_iter - 1 else random.randint(N_MIN, N_MAX)
+        s: str = ''.join(random.choices(list(simbols_d.keys()), k=n))
 
-    assert acc < 15e-6
+        return s,
+
+    print_time(f_l, get_args, n_iter)
+
+
+"""
+=========================================
+roman2integer  3.6e-07  1.8e-06  4.3e-06
+==========================================
+"""
+
+
+# -------------------------------
+
+# TO README
+def test_readme():
+    from utils.make_string import get_readme
+
+    topic = 'Array'
+    file_name = 'roman_to_integer_13.py'
+
+    print('\n')
+    print(get_readme(string_, topic, file_name))
