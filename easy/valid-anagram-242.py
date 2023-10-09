@@ -129,7 +129,7 @@ def test_readme():
     from utils.make_string import get_readme
 
     topic = 'Hash'
-    file_name = 'word-pattern-290.py'
+    file_name = 'valid-anagram-242.py'
 
     print('\n')
     print(get_readme(string_, topic, file_name))
