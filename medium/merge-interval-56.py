@@ -114,7 +114,7 @@ def test_readme():
     from utils.make_string import get_readme
 
     topic = 'Intervals'
-    file_name = 'summary-ranges-228.py'
+    file_name = 'merge-interval-56.py'
 
     print('\n')
     print(get_readme(string_, topic, file_name))
